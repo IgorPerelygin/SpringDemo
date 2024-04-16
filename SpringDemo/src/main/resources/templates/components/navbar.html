@@ -1,6 +1,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <div th:fragment="navbar" class="container px-4 px-lg-5">
-  <a class="navbar-brand" href="/">Блог для всех</a>
+  <a class="navbar-brand" href="/">БлогNote</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     Menu
     <i class="fas fa-bars"></i>
@@ -12,7 +12,7 @@
         <a class="nav-link px-lg-3 py-3 py-lg-4" href="/addArticle">Добавить статью</a>
       </li>
       <li class="nav-item" th:if="${#authorization.expression('isAuthenticated()')}">
-      <a class="nav-link px-lg-3 py-3 py-lg-4" href="/editArticle/{id}">Редактировать статью</a>
+      <a class="nav-link px-lg-3 py-3 py-lg-4" href="/editArticle/1">Редактировать статью</a>
       </li>
       <li class="nav-item" th:if="${#authorization.expression('isAuthenticated()')}">
         <form id="logoutForm" th:action="@{/logout}" method="post"></form>
